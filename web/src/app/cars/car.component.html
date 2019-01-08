@@ -1,0 +1,29 @@
+<mat-card color="accent">
+  <button mat-raised-button color="primary" (click)="mono()">Mono</button>
+  <div class="card-body">
+    {{car?.id}} - {{car?.description}}
+  </div>
+</mat-card>
+
+<mat-card color="accent">
+  <button mat-raised-button color="primary" (click)="flux()">Flux</button>
+  <div *ngFor="let car of cars" class="card">
+    <div class="card-body">
+      {{car?.id}} - {{car?.description}}
+    </div>
+  </div>
+</mat-card>
+
+<mat-card color="accent">
+  <button mat-raised-button color="primary" (click)="findAllTransient()">Flux Delayed</button>
+  <div *ngFor="let car of cars" class="card">
+    <div class="card-body">
+      {{car?.id}} - {{car?.description}}
+    </div>
+  </div>
+</mat-card>
+
+
+<mat-card color="accent">
+  <button mat-raised-button color="primary">Add</button>
+</mat-card>
